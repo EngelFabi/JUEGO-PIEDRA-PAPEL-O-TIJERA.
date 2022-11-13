@@ -1,0 +1,35 @@
+import os
+os.system("cls")
+
+import random
+
+print("¡JUGUEMOS PIEDRA, PAPEL O TIJERA")
+
+opciones = ["piedra", "papel","tijera"]
+elecion_pc = random.choice(opciones)
+
+while True:
+    eleccion_usuario = input("¡Elige una opcion: ")
+
+    if eleccion_usuario not in opciones:
+        print("¡Opcion incorrecta!")
+        continue
+    
+    elif eleccion_usuario == "piedra" and elecion_pc == "tijera":
+        print(f"¡GANASTE!, La pc eligio {elecion_pc}")
+    elif eleccion_usuario == "papel" and elecion_pc == "piedra":
+        print(f"¡GANASTE!, La pc eligio {elecion_pc}")
+    elif eleccion_usuario == "tijera" and elecion_pc == "papel":
+        print(f"¡GANASTE!, La pc eligio {elecion_pc}")
+    elif eleccion_usuario == "tijera" and elecion_pc == "piedra":
+        print(f"PERDISTE!, La pc eligio {elecion_pc}")
+    elif eleccion_usuario == "piedra" and elecion_pc == "papel":
+        print(f"PERDISTE!, La pc eligio {elecion_pc}")
+    elif eleccion_usuario == "papel" and elecion_pc == "tijera":
+        print(f"PERDISTE!, La pc eligio {elecion_pc}")
+
+    else:
+        eleccion_usuario == elecion_pc
+        print(f"EMPATE!, La pc eligio {elecion_pc}")
+    break
+    
